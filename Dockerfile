@@ -1,7 +1,7 @@
 FROM nginx:1.13.8-alpine
 
-RUN mkdir /docker-volumes/etc/letsencrypt/live/rezepte.rafrey.com
-RUN mkdir /docker-volumes/etc/letsencrypt
+RUN mkdir -p /docker-volumes/etc/letsencrypt/live/rezepte.rafrey.com
+RUN mkdir -p /docker-volumes/etc/letsencrypt
 RUN touch /docker-volumes/etc/letsencrypt/live/rezepte.rafrey.com/fullchain.pem
 RUN touch /docker-volumes/etc/letsencrypt/live/rezepte.rafrey.com/privkey.pem
 RUN touch /docker-volumes/etc/letsencrypt/ssl-dhparams.pem
